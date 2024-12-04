@@ -5,8 +5,44 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -19,12 +55,13 @@ body {
 }
 
 .login-box, .success-box {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 35px rgba(255, 140, 0, 0.2);
     max-width: 400px;
     margin: 0 auto;
+    border: 1px solid rgba(255, 140, 0, 0.1);
 }
 
 h2 {
@@ -48,7 +85,7 @@ h2 {
 }
 
 .input-group input:focus {
-    border-color: #667eea;
+    border-color: #ff8c00;
     outline: none;
 }
 
@@ -82,14 +119,19 @@ h2 {
 }
 
 .remember-forgot a {
-    color: #667eea;
+    color: #ff8c00;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.remember-forgot a:hover {
+    color: #ff4500;
 }
 
 button {
     width: 100%;
     padding: 12px;
-    background: #667eea;
+    background: #ff8c00;
     color: white;
     border: none;
     border-radius: 5px;
@@ -99,7 +141,7 @@ button {
 }
 
 button:hover {
-    background: #764ba2;
+    background: #ff4500;
 }
 
 .error-message {
@@ -116,8 +158,13 @@ button:hover {
 }
 
 .register-link a {
-    color: #667eea;
+    color: #ff8c00;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #ff4500;
 }
 
 /* Success Page Styles */
@@ -136,19 +183,7 @@ button:hover {
     margin: 20px 0;
 }
 
-.logout-btn {
-    display: inline-block;
-    padding: 10px 30px;
-    background: #667eea;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
 
-.logout-btn:hover {
-    background: #764ba2;
-}
 
 @media (max-width: 480px) {
     .login-box, .success-box {
